@@ -29,11 +29,11 @@ You can select the training algorithm by setting ```--config='sia' or other avai
 To modify the hyper-parameters of algorithms and environments, refer to:
 
 ```
-src/config/algs/sia.yaml
-src/config/default.yaml
+config/algs/sia.yaml
+config/default.yaml
 ```
 ```
-src/config/envs/sc2.yaml
+config/envs/sc2.yaml
 ```
 
 ## Note
