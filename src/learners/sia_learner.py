@@ -146,11 +146,11 @@ class SIALearner:
 
         vae_loss = masked_rec_next_obs_loss + masked_rec_reward_loss + masked_kl_loss
 
-        # total_loss = loss + vae_loss
+        total_loss = loss + vae_loss
 
         # Optimise
         self.optimiser.zero_grad()
-        loss.backward()
+        total_loss.backward()
         grad_norm = th.nn.utils.clip_grad_norm_(self.params, self.args.grad_norm_clip)
         self.optimiser.step()
 
